@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:layout_gravity="right">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="#E0E0E0">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="View Path"
+            android:id="@+id/btn_path"
+            style="@android:style/Widget.Button.Small"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+            android:autoText="false"
+            android:clickable="false"
+            android:minHeight="49dp"
+            android:layout_weight="0.06" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 km"
+            android:id="@+id/tvDistance"
+            android:paddingLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Small" />
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_distance"
+            android:layout_weight="0.04"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 min"
+            android:id="@+id/tvDuration"
+            android:textAppearance="@android:style/TextAppearance.Material.Small"
+            android:paddingLeft="10dp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_clock"
+            android:layout_weight="0.07"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="#E0E0E0"
+        android:layout_gravity="center_vertical">
+
+        <Button
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="false"
+            android:text="Accept Job"
+            android:id="@+id/btn_accept"
+            style="@android:style/Widget.Button.Small"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+            android:layout_above="@+id/map"
+
+            />
+
+        <Button
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:text="View Orders"
+            android:id="@+id/btn_order"
+            android:layout_above="@+id/map"
+            android:layout_height="36dp"
+            style="@android:style/Widget.Button.Small"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+</LinearLayout>
